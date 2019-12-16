@@ -6,7 +6,7 @@
 
 * Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
 
-Thank you to [fandom.com](https://bobs-burgers.fandom.com/wiki/Burger_of_the_Day) for the funy content. 
+Thank you to [fandom.com](https://bobs-burgers.fandom.com/wiki/Burger_of_the_Day) for the funny content. 
 
 **Technologies Used**
     1. node.js
