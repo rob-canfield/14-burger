@@ -2,12 +2,12 @@ var orm = require("../config/orm.js");
 
 var burger = {
   all: function(callBack) {
-    orm.selectAll("burgers", function(response) {
+    orm.selectAll(function(response) {
       callBack(response);
     });
   },
   create: function(cols, vals, callBack) {
-    orm.insertOne("cats", cols, vals, function(response) {
+    orm.insertOne("burgers", cols, vals, function(response) {
       callBack(response);
     });
   },
