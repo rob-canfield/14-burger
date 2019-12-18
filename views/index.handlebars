@@ -8,7 +8,10 @@
   <ul>
     {{#each burgers}}
     {{#unless devoured}}
-    {{> burgers/block devoured=true}}
+    <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+    <button type="button" class="eatburger" id="eatbutton" data-id="{{this.id}}"
+      data-newDevoured="{{devour}}">devour</button>
+    <hr>
     {{/unless}}
     {{/each}}
   </ul>
@@ -18,13 +21,16 @@
 <div id="right">
 
 <h2>you've eaten these burgers</h2>
-<ul>
-  {{#each burgers}}
+  <ul>
+    {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/block devoured=false}}
+    <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+    <button type="button" class="trashburger" id="trashbutton" data-id="{{this.id}}"
+      data-newDevoured="{{devour}}">dispose</button>
+    <hr>
     {{/if}}
-  {{/each}}
-</ul>
+    {{/each}}
+  </ul>
 </div>
 
 <div id="add">
@@ -33,10 +39,10 @@
   <form class="create-form">
 
     <div class="form-group">
-      <label for="burger">burger name:</label>
-      <input type="text" id="burger" name="name">
+      <label for="newburger">burger name:</label>
+      <input type="text" id="newburger" name="burger">
     </div>
 
-    <button type="submit">add burger</button>
+    <button type="submit" id="addburger">add burger</button>
   </form>
 </div>
