@@ -12,14 +12,14 @@ router.get("/", function(req, res) {
       burgers: data
     };
 
-    console.log(hbsObject);
+    console.log("cool", hbsObject);
     res.render("index", hbsObject);
   });
 });
 
 router.post("/api/burgers", function(req, res) {
 
-  burger.create(["name"], [req.body.name], function(result) {
+  burger.create([req.body.name], function(result) {
 
     res.json({ id: result.insertId });
 
@@ -35,8 +35,6 @@ router.put("/api/burgers/:id", function(req, res) {
     {
       name: req.body.name
     },
-
-    condition,
 
     function(result) {
       if (result.changedRows === 0) {

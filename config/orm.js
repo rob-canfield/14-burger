@@ -1,4 +1,4 @@
-var connection = require('./connection');
+var connection = require("../config/connection");
 
 function printQuestionMarks(num) {
   var arr = [];
@@ -23,7 +23,7 @@ var orm = {
   },
   // An example of objColVals would be {name: panther, sleepy: true}
   insertOne: function (values, callBack) {
-    var queryString = "INSERT INTO burger (burger_name) VALUES (" + printQuestionMarks(values.length) + ")";
+    var queryString = "INSERT INTO burgers (burger_name) VALUES (" + values + ")";
 
     connection.query(queryString, values, function (err, result) {
       if (err) { throw err; }
