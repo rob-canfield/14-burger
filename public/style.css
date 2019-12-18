@@ -3,3 +3,27 @@ body {
     font-family: 'Lilita One', cursive;
 }
 
+h1 {
+    color: red;
+    margin: 0 30% 20px 30%;
+
+}
+
+#left {
+    float: left;
+    width: 40%;
+    border-right: solid 1px black;
+    padding: 20px;
+}
+
+#right {
+    float: right;
+    width: 40%;
+    padding: 20px;
+}
+
+#add {
+    position: fixed;
+    bottom: 80px;
+    margin: 10px 30% 10px 30%;
+}
